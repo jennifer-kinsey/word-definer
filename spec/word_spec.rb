@@ -9,4 +9,11 @@ describe (Word) do
       expect(test_word.word).to(eq('sesquipedalia'))
     end
   end
+
+  describe('.all') do
+    it('returns a list of all the words and it is empty to start') do
+      test_word = Word.new({:word =>'antidisestablishmentarianism'})
+      expect(Word.all).to(eq([]))
+    end
+  end
 end

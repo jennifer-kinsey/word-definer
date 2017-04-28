@@ -5,4 +5,8 @@ class Word
     @word = attributes.fetch(:word)
   end
 
+  def self.all
+    []
+  end
+
 end
