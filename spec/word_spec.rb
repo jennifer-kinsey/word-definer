@@ -52,5 +52,19 @@ describe (Word) do
     end
   end
 
+  describe('#id') do
+    it('returns the id number of the Word') do
+      test_word = Word.new({:word =>'ichthyocoprolite'})
+      test_word.save
+      expect(test_word.id).to(eq(1))
+    end
+  end
 
+  describe('.find') do
+    it('returns a word by its ID number') do
+      test_word = Word.new({:word =>'autothaumaturgist'})
+      test_word.save
+      expect(Word.find(test_word.id)).to(eq(test_word))
+    end
+  end
 end

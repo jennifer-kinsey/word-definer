@@ -1,10 +1,11 @@
 class Word
-  attr_reader(:word)
+  attr_reader(:word, :id)
   @@words = []
 
   def initialize (attributes)
     @word = attributes.fetch(:word)
     @definitions = []
+    @id = @@words.length + 1
   end
 
   def self.all
@@ -25,6 +26,16 @@ class Word
 
   def add_definitions(definitions)
     @definitions.push(definitions)
+  end
+
+  def self.find(id_num)
+    found_word = nil
+    @@words.each do |word|
+      if word.id == id_num
+        found_word = word
+      end
+    end
+    found_word
   end
 
 end
