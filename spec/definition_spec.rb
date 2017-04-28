@@ -1,4 +1,4 @@
-require "word_definer"
+require "definition"
 require "rspec"
 require "pry"
 
