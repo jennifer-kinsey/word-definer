@@ -1,0 +1,6 @@
+<% @words.each do |word| %>
+  <h2><a href='/words/<%= word.id %>'><%= word.word %></a>
+  </h2>
+<% end %>
+
+<a href='/'>Back to home</a>
