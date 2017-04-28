@@ -1,12 +1,11 @@
 class Word
-  attr_reader(:word, :id) #url)
+  attr_reader(:word, :id) 
   @@words = []
 
   def initialize (attributes)
     @word = attributes.fetch(:word)
     @definitions = []
     @id = @@words.length + 1
-    # @url = attributes.fetch(:url)
   end
 
   def self.all
@@ -28,10 +27,6 @@ class Word
   def add_definitions(definitions)
     @definitions.push(definitions)
   end
-
-  # def add_picture(url)
-  #   @url
-  # end
 
   def self.find(id_num)
     found_word = nil
