@@ -16,4 +16,11 @@ describe (Word) do
       expect(Word.all).to(eq([]))
     end
   end
+
+  describe('#save') do
+    it('adds saves the word to an array of words') do
+      test_word = Word.new({:word =>'floccinaucinihilipilification'})
+      expect(test_word.save).to(eq([test_word]))
+    end
+  end
 end
