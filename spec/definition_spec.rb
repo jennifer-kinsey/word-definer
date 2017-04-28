@@ -19,4 +19,12 @@ describe(Definition) do
     end
   end
 
+#MAY WANT TO REVISIT THIS
+  describe('#save') do
+    it('saves the definition into an array of definitions') do
+      test_definition = Definition.new({:definition => 'setting at little or no value'})
+      expect(test_definition.save).to(eq(['setting at little or no value']))
+    end
+  end
+
 end
