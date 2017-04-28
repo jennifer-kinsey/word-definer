@@ -35,4 +35,22 @@ describe (Word) do
       expect(Word.all).to(eq([]))
     end
   end
+
+  describe('#definitions') do
+    it('return the definitions array; it is empty to start')do
+      test_word = Word.new({:word =>'rhinotillexomania'})
+      expect(test_word.definitions).to(eq([]))
+    end
+  end
+
+  describe('#add_definitions') do
+    it('adds the definitions to the selected word') do
+      test_word = Word.new({:word =>'podobromhydrosis'})
+      test_definition = Definition.new({:definition => 'smelly feet'})
+      test_word.add_definitions(test_definition)
+      expect(test_word.definitions).to(eq([test_definition]))
+    end
+  end
+
+
 end

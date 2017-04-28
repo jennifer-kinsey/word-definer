@@ -4,6 +4,7 @@ class Word
 
   def initialize (attributes)
     @word = attributes.fetch(:word)
+    @definitions = []
   end
 
   def self.all
@@ -16,6 +17,14 @@ class Word
 
   def self.clear
     @@words = []
+  end
+
+  def definitions
+    @definitions
+  end
+
+  def add_definitions(definitions)
+    @definitions.push(definitions)
   end
 
 end
