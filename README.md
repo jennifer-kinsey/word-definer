@@ -2,11 +2,6 @@
 
 This is a Ruby app which is a kid-centric website for kiddos to add the newest phrase they are using so their equally hip friends can know all the cool new lingo.
 
-.. image:: https://raw.githubusercontent.com/jakubroztocil/httpie/master/httpie.png
-  :alt: cool stuff
-  :width: 100%
-  :align: center
-
 ### Prerequisites
 
 Web browser with ES6 compatibility
