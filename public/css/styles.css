@@ -1,11 +1,14 @@
 .jumbotron, .footer {
   text-align: center;
-  color: white;
-  background-image: url('/img/jumbotron.jpg');
-  background-size: 100% 100%;
+  color: lightseagreen;
+  background-image: url('/img/jumbotron.png');
   background-repeat: no-repeat;
   font-family: 'Leckerli One', cursive;
 }
+span {
+  background-color: yellow;
+}
+
 .footer {
   position: absolute;
   bottom: 0;
