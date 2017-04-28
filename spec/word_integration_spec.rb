@@ -30,10 +30,32 @@ describe('the paths for adding a new word and definition(s) for that word', {:ty
     expect(page).to have_content('Add Definition')
   end
 
-  it('click on Add Definition to be taken to form page for adding definition') do
+  it('allows user to click on Add Definition to be taken to form page for adding definition') do
     visit('/words/1')
     click_link('Add Definition')
     expect(page).to have_content('polyphiloprogenitive means:')
+  end
+
+  it('receives input of definition and returns it to the word page') do
+    visit('words/1/definitions/new')
+    fill_in('definition', :with => 'very fertile')
+    click_button('Add Definition')
+    click_link('Back to list of words')
+    click_link('polyphiloprogenitive')
+    expect(page).to have_content('polyphiloprogenitive')
+    expect(page).to have_content('very fertile')
+  end
+
+  it('allows additional definitions to be added to the word') do
+    visit('words/1')
+    click_link('Add Definition')
+    fill_in('definition', :with => 'very imaginative')
+    click_button('Add Definition')
+    click_link('Back to list of words')
+    click_link('polyphiloprogenitive')
+    expect(page).to have_content('polyphiloprogenitive')
+    expect(page).to have_content('very fertile')
+    expect(page).to have_content('very imaginative')
   end
 
 end
