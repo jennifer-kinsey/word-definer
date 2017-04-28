@@ -1,9 +1,8 @@
-# example ruby code
+class Definition
+  attr_reader(:definition)
 
-# class Palindrome
+  def initialize(attributes)
+    @definition = attributes.fetch(:definition)
+  end
 
-#   def is_word?(user_input)
-#     user_input.match?(/[aeiouy]+/i)
-#   end
-
-# end
+end

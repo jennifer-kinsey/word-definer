@@ -1,19 +1,13 @@
-require "definition"
-require "rspec"
-require "pry"
+require 'definition'
+require 'rspec'
+require 'pry'
 
 
-# example project spec
-
-# describe 'Palindrome#isWord?' do
-#   let(:word) { Palindrome.new }
-
-#   it "returns true if the word has at least one vowel" do
-#     expect(word.is_word?("word")).to eq true
-#   end
-
-#   it "returns false if the word does not have a vowel" do
-#     expect(word.is_word?("wrd")).to eq false
-#   end
-
-# end
+describe(Definition) do
+  describe('#definition') do
+    it('returns a string of words which is a definition of a word') do
+      test_definition = Definition.new({:definition => 'characterized by long words; long-winded'})
+      expect(test_definition.definition).to(eq('characterized by long words; long-winded'))
+    end
+  end
+end
