@@ -52,6 +52,14 @@ describe (Word) do
     end
   end
 
+  # describe('#add_picture') do
+  #   it('returns the image link for the word') do
+  #     test_word = Word.new({:word =>'arachibutyrophobia'})
+  #     this = test_word.add_picture('sample.jpg')
+  #     expect(test_word.add_picture).to(eq('sample.jpg'))
+  #   end
+  # end
+
   describe('#id') do
     it('returns the id number of the Word') do
       test_word = Word.new({:word =>'ichthyocoprolite'})
