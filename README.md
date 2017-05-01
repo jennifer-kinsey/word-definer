@@ -8,7 +8,7 @@ This is a Ruby app which is a kid-centric website for kiddos to add the newest p
 ![buzzworthy3](https://cloud.githubusercontent.com/assets/26371824/25548056/73033b4c-2c1f-11e7-93a6-d037b7ac662b.png)
 
 
-###Heroku Link:
+### Heroku Link:
  https://calm-journey-64955.herokuapp.com/
 
 ### Prerequisites
